@@ -6,10 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## [Unreleased]
 
 
-## 0.0.1 - 2017-05-11
+## 1.0.0 - 2017-05-12
 
 ### Added
 
 - Initial Version of EmojiOne
+- Cocoapod Support
+- SwiftPM Support
 
-[Unreleased]: https://github.com/ranesr/EmojiOne
+[Unreleased]: https://github.com/ranesr/EmojiOne/compare/1.0.0...master
