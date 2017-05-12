@@ -47,6 +47,7 @@
 		A61B425C1EC3C2CF00F1020D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		A61B425E1EC3C2FD00F1020D /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = SOURCE_ROOT; };
 		A61B42601EC50D5C00F1020D /* IconTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconTableViewCell.swift; sourceTree = "<group>"; };
+		A61B42641EC5FD2300F1020D /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +103,7 @@
 				A61B425A1EC3C29800F1020D /* README.md */,
 				A61B425C1EC3C2CF00F1020D /* LICENSE */,
 				A61B425E1EC3C2FD00F1020D /* CHANGELOG.md */,
+				A61B42641EC5FD2300F1020D /* Package.swift */,
 			);
 			path = EmojiOne;
 			sourceTree = "<group>";
