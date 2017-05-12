@@ -3,7 +3,7 @@
 
 [![CocoaPods](https://img.shields.io/cocoapods/v/EmojiOne.svg)](http://cocoadocs.org/docsets/EmojiOne)  [![Platform](https://img.shields.io/cocoapods/p/EmojiOne.svg)](http://cocoadocs.org/docsets/EmojiOne)  ![Swift](https://img.shields.io/badge/%20in-swift%203.0-orange.svg)
 
-[![Travis](https://img.shields.io/travis/ranesr/EmojiOne.svg)](https://travis-ci.org/ranesr/SwiftIcons/)
+[![Travis](https://img.shields.io/travis/ranesr/EmojiOne.svg)](https://travis-ci.org/ranesr/EmojiOne/)
 
 
 Please &#9733; this library.
