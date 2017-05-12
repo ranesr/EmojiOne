@@ -2,9 +2,9 @@
 
 Please &#9733; this library.
 
-This EmojiOne library helps you use icons from [EmojiOne](https://emojione.com)
+This EmojiOne library helps you use icons from [EmojiOne](https://emojione.com).
 
-EmojiOne library currently supports `UIImageView` and `UILabel`
+EmojiOne library currently supports `UIImageView` and `UILabel`.
 
 ## Requirements
 
@@ -16,7 +16,8 @@ EmojiOne library currently supports `UIImageView` and `UILabel`
 ### Manually
 
 Copy the file from `Sources` folder.
-[Link to files](https://github.com/ranesr/EmojiOne/tree/master/Sources).
+
+[Link to file](https://github.com/ranesr/EmojiOne/tree/master/Sources).
 
 ## Usage
 
