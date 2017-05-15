@@ -23,9 +23,38 @@
 import UIKit
 import Foundation
 
+public extension UIImage {
+    public func resizeImage(targetSize: CGSize) -> UIImage {
+        let size = self.size
+        
+        let widthRatio  = targetSize.width  / self.size.width
+        let heightRatio = targetSize.height / self.size.height
+        
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+        } else {
+            newSize = CGSize(width: size.width * widthRatio, height: size.height * widthRatio)
+        }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        //let rect = CGRect(0, 0, newSize.width, newSize.height)
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        self.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
+}
+
 public extension UIImageView {
     
-    public func setEmoji(_ emoji: EmojiOne) {
+    public func setEmoji(emoji: EmojiOne) {
         let url = emoji.url
         URLSession.shared.dataTask(with: URL(string:url)!, completionHandler: {
             (data, response, error) -> Void in
@@ -39,7 +68,7 @@ public extension UIImageView {
 
 public extension UILabel {
     
-    public func setEmoji(_ prefixText: String, _ emoji: EmojiOne, _ postfixText: String) {
+    public func setEmoji(prefixText: String, emoji: EmojiOne, postfixText: String) {
         
         let url = emoji.url
         let height = frame.size.height
@@ -48,18 +77,19 @@ public extension UILabel {
             (data, response, error) -> Void in
             DispatchQueue.main.async {
                 if let data = data {
-                    var image: UIImage!
+                    let image = UIImage(data: data)
+                    var emojiImage: UIImage!
                     if height < 128 {
                         let size = CGSize(width: height - 15, height: height - 15)
-                        image = self.resizeImage(image: UIImage(data: data)!, targetSize: size)
+                        emojiImage = image?.resizeImage(targetSize: size)
                     } else {
-                        image = UIImage(data: data)
+                        emojiImage = image
                     }
                     
                     let text = NSMutableAttributedString(string: prefixText)
                     
                     let attachment = NSTextAttachment()
-                    attachment.image = image
+                    attachment.image = emojiImage
                     let attachmentString = NSAttributedString(attachment: attachment)
                     
                     let string = NSMutableAttributedString(string: postfixText)
@@ -76,32 +106,33 @@ public extension UILabel {
             }
         }).resume()
     }
-    
-    private func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
-        let size = image.size
-        
-        let widthRatio  = targetSize.width  / image.size.width
-        let heightRatio = targetSize.height / image.size.height
-        
-        // Figure out what our orientation is, and use that to form the rectangle
-        var newSize: CGSize
-        if(widthRatio > heightRatio) {
-            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
-        } else {
-            newSize = CGSize(width: size.width * widthRatio, height: size.height * widthRatio)
-        }
-        
-        // This is the rect that we've calculated out and this is what is actually used below
-        //let rect = CGRect(0, 0, newSize.width, newSize.height)
-        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
-        
-        // Actually do the resizing to the rect using the ImageContext stuff
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
-        image.draw(in: rect)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return newImage!
+}
+
+public extension UIButton {
+    public func setEmoji(title: String, emoji: EmojiOne, forState state: UIControlState) {
+        let url = emoji.url
+        let height = frame.size.height
+
+        URLSession.shared.dataTask(with: URL(string:url)!, completionHandler: {
+            (data, response, error) -> Void in
+            DispatchQueue.main.async {
+                if let data = data {
+                    let image = UIImage(data: data)
+                    var emojiImage: UIImage!
+                    
+                    if height < 128 {
+                        let size = CGSize(width: height - 15, height: height - 15)
+                        emojiImage = image?.resizeImage(targetSize: size)
+                    } else {
+                        emojiImage = image
+                    }
+                    
+                    self.setImage(emojiImage.withRenderingMode(.alwaysOriginal), for: state)
+                    self.setTitle(title, for: state)
+                    self.setTitleColor(UIColor.black, for: state)
+                }
+            }
+        }).resume()
     }
 }
 
