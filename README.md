@@ -83,9 +83,9 @@ Note that the [Swift Package Manager](https://swift.org/package-manager) is stil
 
 ### Manually
 
-Copy the file from `Sources` folder.
+Copy this file from `Sources` folder.
 
-[Link to file](https://github.com/ranesr/EmojiOne/tree/master/Sources).
+[EmojiOne.swift](https://github.com/ranesr/EmojiOne/blob/master/Sources/EmojiOne.swift).
 
 
 ## Usage
