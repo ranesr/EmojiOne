@@ -1,7 +1,7 @@
 # Swift Library for EmojiOne
 
 
-[![CocoaPods](https://img.shields.io/cocoapods/v/EmojiOne.svg)](http://cocoadocs.org/docsets/EmojiOne)  [![Platform](https://img.shields.io/cocoapods/p/EmojiOne.svg)](http://cocoadocs.org/docsets/EmojiOne)  ![Swift](https://img.shields.io/badge/%20in-swift%203.0-orange.svg)
+[![CocoaPods](https://img.shields.io/cocoapods/v/EmojiOne.svg)](http://cocoadocs.org/docsets/EmojiOne)  [![Platform](https://img.shields.io/cocoapods/p/EmojiOne.svg)](http://cocoadocs.org/docsets/EmojiOne)  ![Swift](https://img.shields.io/badge/%20in-swift%203.0-orange.svg)  [![Codebeat Badge](https://codebeat.co/badges/b9a042f6-15ca-4d3d-b272-815871ea5388)](https://codebeat.co/projects/github-com-ranesr-emojione-master)
 
 [![Travis](https://img.shields.io/travis/ranesr/EmojiOne.svg)](https://travis-ci.org/ranesr/EmojiOne/)
 
