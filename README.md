@@ -10,7 +10,7 @@ Please &#9733; this library.
 
 This EmojiOne library helps you use icons from [EmojiOne](https://emojione.com).
 
-EmojiOne library currently supports `UIImageView` and `UILabel`.
+EmojiOne library currently supports `UIImageView`, `UILabel` and `UIButton`.
 
 
 ## Requirements
@@ -85,7 +85,7 @@ Note that the [Swift Package Manager](https://swift.org/package-manager) is stil
 
 Copy this file from `Sources` folder.
 
-[EmojiOne.swift](https://github.com/ranesr/EmojiOne/blob/master/Sources/EmojiOne.swift).
+[EmojiOne.swift](https://github.com/ranesr/EmojiOne/blob/master/Sources/EmojiOne.swift)
 
 
 ## Usage
@@ -96,8 +96,8 @@ Copy this file from `Sources` folder.
 ```Swift
 
 // Setting emoji to image view
-imageView.setEmoji(.speechLeft)
-imageView.setEmoji(.womanRowingBoat)
+imageView.setEmoji(emoji: .speechLeft)
+imageView.setEmoji(emoji: .womanRowingBoat)
 
 ```
 
@@ -106,11 +106,26 @@ imageView.setEmoji(.womanRowingBoat)
 ```Swift
 
 // Setting emoji to label
-label.setEmoji("PREFIX TEXT ", .manFarmerTone4, " POSTFIX TEXT")
-label.setEmoji("", .flashlight, " POSTFIX TEXT")
-label.setEmoji("PREFIX TEXT ", .cruiseShip, "")
+label.setEmoji(prefixText: "PREFIX TEXT ", emoji: .manFarmerTone4, postfixText: " POSTFIX TEXT")
+label.setEmoji(prefixText: "", emoji: .flashlight, postfixText: " POSTFIX TEXT")
+label.setEmoji(prefixText: "PREFIX TEXT ", emoji: .cruiseShip, postfixText: "")
 
 ```
+
+### UIButton
+
+```Swift
+
+// Setting emoji to label
+button.setEmoji(title: " TITLE", emoji: .clock12, forState: .normal)
+
+```
+
+
+## Examples
+
+Please check out the [EmojiOne App](https://github.com/ranesr/EmojiOne/tree/master/EmojiOne).
+
 
 ## Author
 
