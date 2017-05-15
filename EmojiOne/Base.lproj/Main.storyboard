@@ -85,6 +85,7 @@
                                             <outlet property="largeIcon" destination="G0F-tA-cxh" id="g4a-eZ-YhN"/>
                                             <outlet property="mediumIcon" destination="WfZ-0V-h5V" id="ENu-Ra-DDs"/>
                                             <outlet property="smallIcon" destination="ZR9-oP-2vJ" id="e2W-dP-tZ0"/>
+                                            <segue destination="NLQ-lS-3cL" kind="show" identifier="showIcon" id="fMU-Yy-2iE"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -110,6 +111,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1037.5999999999999" y="-645.42728635682158"/>
+        </scene>
+        <!--Icon View Controller-->
+        <scene sceneID="z2V-JF-XHC">
+            <objects>
+                <viewController id="NLQ-lS-3cL" customClass="IconViewController" customModule="EmojiOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="biU-Os-2mz"/>
+                        <viewControllerLayoutGuide type="bottom" id="muF-j1-eIr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lqw-kK-l4m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cG0-tO-hD3">
+                                <rect key="frame" x="30" y="94" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nMj-qG-68o"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Od6-5O-9Ny">
+                                <rect key="frame" x="30" y="174" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lza-MZ-SyO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H4p-GW-UlW">
+                                <rect key="frame" x="137" y="264" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="jQM-9F-NB9"/>
+                                    <constraint firstAttribute="height" constant="100" id="qct-zh-SEG"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Od6-5O-9Ny" firstAttribute="leading" secondItem="Lqw-kK-l4m" secondAttribute="leading" constant="30" id="04i-p8-ilM"/>
+                            <constraint firstItem="H4p-GW-UlW" firstAttribute="centerX" secondItem="Lqw-kK-l4m" secondAttribute="centerX" id="CXl-eW-dFb"/>
+                            <constraint firstAttribute="trailing" secondItem="Od6-5O-9Ny" secondAttribute="trailing" constant="30" id="i4I-44-rq5"/>
+                            <constraint firstItem="cG0-tO-hD3" firstAttribute="top" secondItem="biU-Os-2mz" secondAttribute="bottom" constant="30" id="lMf-DN-goo"/>
+                            <constraint firstItem="cG0-tO-hD3" firstAttribute="leading" secondItem="Lqw-kK-l4m" secondAttribute="leading" constant="30" id="nlO-PO-4NJ"/>
+                            <constraint firstItem="H4p-GW-UlW" firstAttribute="top" secondItem="Od6-5O-9Ny" secondAttribute="bottom" constant="40" id="qc4-Va-iur"/>
+                            <constraint firstItem="Od6-5O-9Ny" firstAttribute="top" secondItem="cG0-tO-hD3" secondAttribute="bottom" constant="30" id="sSo-UJ-FuT"/>
+                            <constraint firstAttribute="trailing" secondItem="cG0-tO-hD3" secondAttribute="trailing" constant="30" id="xGU-B1-2Ea"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="cG0-tO-hD3" id="jKB-ZP-DU8"/>
+                        <outlet property="imgView" destination="H4p-GW-UlW" id="onr-mk-fPL"/>
+                        <outlet property="label" destination="Od6-5O-9Ny" id="nY3-G0-gQ2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R1M-v5-WEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1924" y="-645"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ujW-fN-SV8">

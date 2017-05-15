@@ -16,6 +16,7 @@
 		A61B42531EC368C200F1020D /* EmojiOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61B42521EC368C200F1020D /* EmojiOne.swift */; };
 		A61B42551EC3A3B000F1020D /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A61B42541EC3A3B000F1020D /* .gitignore */; };
 		A61B42611EC50D5C00F1020D /* IconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61B42601EC50D5C00F1020D /* IconTableViewCell.swift */; };
+		A61B426E1ECA121400F1020D /* IconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61B426D1ECA121400F1020D /* IconViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A61B42601EC50D5C00F1020D /* IconTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconTableViewCell.swift; sourceTree = "<group>"; };
 		A61B42641EC5FD2300F1020D /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
 		A61B42651EC6006300F1020D /* EmojiOne.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = EmojiOne.podspec; sourceTree = SOURCE_ROOT; };
+		A61B426D1ECA121400F1020D /* IconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				A61B42311EC3682B00F1020D /* AppDelegate.swift */,
 				A61B42601EC50D5C00F1020D /* IconTableViewCell.swift */,
 				A61B42331EC3682B00F1020D /* ViewController.swift */,
+				A61B426D1ECA121400F1020D /* IconViewController.swift */,
 				A61B42351EC3682B00F1020D /* Main.storyboard */,
 				A61B42381EC3682B00F1020D /* Assets.xcassets */,
 				A61B423A1EC3682B00F1020D /* LaunchScreen.storyboard */,
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A61B42341EC3682B00F1020D /* ViewController.swift in Sources */,
+				A61B426E1ECA121400F1020D /* IconViewController.swift in Sources */,
 				A61B42321EC3682B00F1020D /* AppDelegate.swift in Sources */,
 				A61B42611EC50D5C00F1020D /* IconTableViewCell.swift in Sources */,
 				A61B42531EC368C200F1020D /* EmojiOne.swift in Sources */,
@@ -446,6 +450,7 @@
 				A61B424D1EC3682B00F1020D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A61B424E1EC3682B00F1020D /* Build configuration list for PBXNativeTarget "EmojiOneTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +459,7 @@
 				A61B42501EC3682B00F1020D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
