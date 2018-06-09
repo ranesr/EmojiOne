@@ -145,7 +145,7 @@ public extension UILabel {
                     
                     let style = NSMutableParagraphStyle()
                     style.alignment = .center
-                    text.addAttributes([NSParagraphStyleAttributeName: style], range: NSMakeRange(0, text.length))
+                    text.addAttributes([NSAttributedStringKey.paragraphStyle: style], range: NSMakeRange(0, text.length))
                     
                     self.attributedText = text
                 }
@@ -205,7 +205,7 @@ public extension UIButton {
 Enum for list of all icons in EmojiOne
  
 - author - [EmojiOne](http://www.emojione.com/)
-- version: 3.0
+- version: 3.1
  
 ## Important Notes ##
 For icons, please visit [emojione](https://www.emojione.com/emoji/v3)
