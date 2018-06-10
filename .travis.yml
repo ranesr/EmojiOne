@@ -1,13 +1,13 @@
 os: osx
 language: swift
-osx_image: xcode8
+osx_image: xcode9.3
 
 branches:
     only:
     - master
 
 script:
-    - xcodebuild clean build test -project EmojiOne.xcodeproj -scheme EmojiOne -destination 'platform=iOS Simulator,name=iPhone 7' CODE_SIGNING_REQUIRED=NO | xcpretty
+    - xcodebuild clean build test -project EmojiOne.xcodeproj -scheme EmojiOne -destination 'platform=iOS Simulator,name=iPhone X' CODE_SIGNING_REQUIRED=NO | xcpretty
 
 notifications:
 email:
