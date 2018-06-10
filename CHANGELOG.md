@@ -36,8 +36,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - SwiftPM Support
 
 [Unreleased]: https://github.com/ranesr/EmojiOne/compare/2.0.0...master
-[2.0.0] https://github.com/ranesr/EmojiOne/compare/1.1.0...2.0.0
+[2.0.0]: https://github.com/ranesr/EmojiOne/compare/1.1.0...2.0.0
 [1.1.0]: https://github.com/ranesr/EmojiOne/compare/1.0.0...1.1.0
-[#1] https://github.com/ranesr/EmojiOne/issues/1
-[#2] https://github.com/ranesr/EmojiOne/issues/2
-[#3] https://github.com/ranesr/EmojiOne/issues/3
+[#1]: https://github.com/ranesr/EmojiOne/issues/1
+[#2]: https://github.com/ranesr/EmojiOne/issues/2
+[#3]: https://github.com/ranesr/EmojiOne/issues/3
