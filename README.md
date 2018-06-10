@@ -73,7 +73,7 @@ let package = Package(
     name: "YourAwesomeProject",
     targets: [],
     dependencies: [
-        .Package(url: "https://github.com/ranesr/EmojiOne", majorVersion: 1)
+        .Package(url: "https://github.com/ranesr/EmojiOne", majorVersion: 2)
     ]
 )
 ```
